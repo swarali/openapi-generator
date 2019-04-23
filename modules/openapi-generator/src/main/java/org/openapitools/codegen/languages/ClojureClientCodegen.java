@@ -279,7 +279,7 @@ public class ClojureClientCodegen extends DefaultCodegen implements CodegenConfi
 
     @Override
     public String sanitizeTag(String tag) {
-        return tag.replaceAll("[^a-zA-Z_]+", "_");
+        return tag.replaceAll("[^a-zA-Z0-9_]+", "_");
     }
 
     @Override
