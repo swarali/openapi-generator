@@ -303,6 +303,7 @@ public class DefaultGenerator extends AbstractGenerator implements Generator {
         for (String templateName : config.modelTemplateFiles().keySet()) {
             String suffix = config.modelTemplateFiles().get(templateName);
             String filename = config.modelFileFolder() + File.separator + config.toModelFilename(modelName) + suffix;
+            LOGGER.info("Generate model " + modelName + "suffix: " + suffix);
             if (!config.shouldOverwrite(filename)) {
                 LOGGER.info("Skipped overwriting " + filename);
                 continue;
