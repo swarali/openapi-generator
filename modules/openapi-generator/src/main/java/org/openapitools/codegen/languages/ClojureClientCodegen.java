@@ -169,7 +169,7 @@ public class ClojureClientCodegen extends DefaultCodegen implements CodegenConfi
 
     @Override
     public String toModelName(String name) {
-        return dashize(name);
+        return underscore(name).replaceAll("[_ /]", "-");
     }
 
     @Override
