@@ -149,11 +149,13 @@ public class ClojureClientCodegen extends DefaultCodegen implements CodegenConfi
         }
 
         // If it's a type we defined, we want to append the spec suffix
+        return super.getTypeDeclaration(p);
+        /*
         if (!typeMapping.containsKey(super.getSchemaType(p))) {
             return super.getTypeDeclaration(p) + "-spec";
         } else {
             return super.getTypeDeclaration(p);
-        }
+        }*/
     }
 
     @Override
